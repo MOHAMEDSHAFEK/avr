@@ -1,0 +1,18 @@
+
+
+
+
+
+#include <avr/io.h>
+	#include <avr/delay.h>
+	//#define set_bit(var,bit_no)   var=(1<<bit_no)|var
+	void main(void)
+	{
+		DDRC=0b11111111;
+		PORTC=0x00;
+
+	    while (1)
+	    {
+
+		}
+	}

@@ -1,0 +1,8 @@
+#ifndef _HAL_KEYPAD_KEYPAD_INTERFACE_H_
+#define _HAL_KEYPAD_KEYPAD_INTERFACE_H_
+
+
+void KeyPad_VidInit(u8 LOC_u8Port);
+u8 GetPressedKey(u8 LOC_u8Port);
+
+#endif  /* _HAL_KEYPAD_KEYPAD_INTERFACE_H_*/

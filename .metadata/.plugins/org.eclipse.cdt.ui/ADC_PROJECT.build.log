@@ -1,0 +1,45 @@
+16:48:09 **** Incremental Build of configuration Debug for project ADC_PROJECT ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+In file included from ../ADC_Program.c:5:
+../ADC_Regster.h:20:1: warning: "ADTS0" redefined
+../ADC_Regster.h:12:1: warning: this is the location of the previous definition
+../ADC_Regster.h:21:1: warning: "ADTS1" redefined
+../ADC_Regster.h:11:1: warning: this is the location of the previous definition
+../ADC_Regster.h:22:1: warning: "ADTS2" redefined
+../ADC_Regster.h:10:1: warning: this is the location of the previous definition
+Finished building: ../ADC_Program.c
+ 
+Building target: ADC_PROJECT.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_PROJECT.map -mmcu=atmega32 -o "ADC_PROJECT.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./LCD_4BIT_Program.o ./main.o   
+Finished building target: ADC_PROJECT.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_PROJECT.elf  >"ADC_PROJECT.lss"
+Finished building: ADC_PROJECT.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_PROJECT.elf  "ADC_PROJECT.hex"
+Finished building: ADC_PROJECT.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_PROJECT.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10450 bytes (31.9% Full)
+(.text + .data + .bootloader)
+
+Data:         25 bytes (1.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:48:12 Build Finished (took 2s.430ms)
+

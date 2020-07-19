@@ -1,0 +1,48 @@
+
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "TIMER_Regster.h"
+#include "EXI_Regster.h"
+#include "DIO_Interface.h"
+
+static void (*CallBackFuncPtr)(void);
+
+
+
+
+void ADC_VidSetCallBack(void (*LOC_fptr)(void)  )
+{
+	if(LOC_fptr != NULL )
+	{
+		CallBackFuncPtr = LOC_fptr ;
+	}
+}
+
+void TIMER_VidEnable(void)
+{
+	//SELECT MODE
+	CLR_BIT(TCCR0,3);
+	CLR_BIT(TCCR0,6);
+	//CLOCK SELECT PRESCALER
+	CLR_BIT(TCCR0,0);
+	CLR_BIT(TCCR0,1);
+	SET_BIT(TCCR0,2);
+	//ENABLE INTRRUPT
+	SET_BIT(TIMSK,0);
+	CLR_BIT(TIMSK,1);
+
+	TCNT0=238;
+}
+
+
+ISR(TIMER_VECT)
+{
+	{
+	if(CallBackFuncPtr != NULL )
+	{
+		CallBackFuncPtr();
+	}
+
+	}
+/*
+*/

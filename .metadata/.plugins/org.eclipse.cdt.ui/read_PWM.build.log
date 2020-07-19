@@ -1,0 +1,54 @@
+02:15:27 **** Incremental Build of configuration Debug for project read_PWM ****
+make all 
+Building file: ../TIMER_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_Program.d" -MT"TIMER_Program.o" -c -o "TIMER_Program.o" "../TIMER_Program.c"
+Finished building: ../TIMER_Program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:16:
+../TIMER_Regster.h:57:1: warning: "prescaler_mode" redefined
+In file included from ../main.c:11:
+../ADC_Regster.h:68:1: warning: this is the location of the previous definition
+In file included from ../main.c:19:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'Vid_Read_PWM':
+../main.c:90: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:92: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:94: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:96: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+Finished building: ../main.c
+ 
+Building target: read_PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,read_PWM.map -mmcu=atmega32 -o "read_PWM.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./LCD_4BIT_Program.o ./TIMER_Program.o ./main.o   
+Finished building target: read_PWM.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S read_PWM.elf  >"read_PWM.lss"
+Finished building: read_PWM.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex read_PWM.elf  "read_PWM.hex"
+Finished building: read_PWM.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 read_PWM.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12156 bytes (37.1% Full)
+(.text + .data + .bootloader)
+
+Data:         41 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+02:15:31 Build Finished (took 3s.776ms)
+

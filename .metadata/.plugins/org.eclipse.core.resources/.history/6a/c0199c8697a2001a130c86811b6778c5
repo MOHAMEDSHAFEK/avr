@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: May 29, 2020
+ *      Author: shafek
+ */
+	#include "std_types.h"
+	#include "BIT_Math.h"
+	#include "DIO_Interface.h"
+	#include <avr/delay.h>
+	#define set_bit(var,bit_no)   var=(1<<bit_no)|var
+	void main(void)
+	{
+		/*DIO_VidSetPinDircection (PORTD,PIN0,INPUT);
+		DIO_VidSetPinValue (PORTD,PIN0,HIGHE);*/
+		DIO_VidSetPortDirection(PORTD, INPUT);
+	    while (1)
+	    {
+	    	/*DIO_VidSetPinValue (PORTD,PIN0,HIGHE);
+	    	_delay_ms(1000);
+	    	DIO_VidSetPinValue (PORTD,PIN0,LOW);
+	    	_delay_ms(1000);*/
+	    	if((DIO_U8GitPinValue(PORTA,PIN2))==0)
+	    	 { DIO_VidSetPortValue(PORTD, HIGHE);
+	    	 }
+	    	else
+	    		{DIO_VidSetPortValue(PORTD,LOW);}
+		}
+	}

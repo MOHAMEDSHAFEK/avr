@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;interfacing/cots/HAL/DIO_FUNCTION/DIO_TYPY.h&apos; to &apos;DIO_TYPY1.h&apos;" description="Rename resource &apos;DIO_TYPY.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cots/HAL/DIO_FUNCTION/DIO_TYPY.h" name="DIO_TYPY1.h" stamp="1593027551104" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;interfacing/cots/APP/ADC&apos; to &apos;ADC.c&apos;" description="Rename resource &apos;ADC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cots/APP/ADC" name="ADC.c" stamp="1593031861798" updateReferences="true"/>
+</session>

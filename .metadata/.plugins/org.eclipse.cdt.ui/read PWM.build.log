@@ -1,0 +1,26 @@
+05:48:49 **** Incremental Build of configuration Debug for project read PWM ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+Finished building: ../ADC_Program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:23: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:40: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:49: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:53: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+Finished building: ../main.c
+ 
+Building target: read PWM.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,read PWM.map -mmcu=atmega32 -o "read PWM.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./LCD_4BIT_Program.o ./TIMER_Program.o ./main.o   
+avr-gcc.exe: PWM.map: No such file or directory
+make: *** [read PWM.elf] Error 1
+
+05:48:50 Build Finished (took 1s.90ms)
+

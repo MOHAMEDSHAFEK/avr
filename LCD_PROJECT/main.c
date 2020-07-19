@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: May 30, 2020
+ *      Author: MGIsmail
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_Interface.h"
+#include "LCD_Interface.h"
+
+
+int main (void)
+{
+	LCD_VidInit8bit();
+	LCD_VidWriteData8bit('A');
+	LCD_VidWriteData8bit('N');
+	LCD_VidWriteData8bit('A');
+	LCD_VidWriteData8bit('S');
+
+	while(1)
+	{
+
+	}
+	return 0;
+}
+

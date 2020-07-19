@@ -1,0 +1,21 @@
+
+
+#ifndef COTS_MCAL_TIMER_TIMER_REGSTER_H_
+#define COTS_MCAL_TIMER_TIMER_REGSTER_H_
+
+
+#define INT0 7
+
+
+
+#define TCCR0 *((volatile unsigned char *)0x53)
+
+#define TIMSK  *((volatile unsigned char *)0x59)
+
+#define TIFR  *((volatile unsigned char *)0x58)
+
+#define SFIOR  *((volatile unsigned char *)0x50)
+
+
+
+#endif /* COTS_MCAL_TIMER_TIMER_REGSTER_H_*/

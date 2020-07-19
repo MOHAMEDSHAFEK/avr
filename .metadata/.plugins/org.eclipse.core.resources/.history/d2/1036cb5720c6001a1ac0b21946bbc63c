@@ -1,0 +1,45 @@
+
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "TIMER_Regster.h"
+#include "timer_congiration.h"
+#include "EXI_Regster.h"
+#include "DIO_Interface.h"
+
+static void  (*CallBackFuncPtr)(void)= NULL;
+
+void  TIMER_VidSetCallBack (void (*LOC_funcptr)(void) )
+{
+	if(LOC_funcptr  != NULL )
+	{
+		CallBackFuncPtr = LOC_funcptr ;
+	}
+}
+
+void TIMER0_VidInit(Timer0Mode_type mode, Timer0Scaler_type scaler)
+{
+	switch(mode)
+	{
+		case: TIMER0_N
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ISR(TIMER_CTC_VECT)
+{
+	if(CallBackFuncPtr != NULL )
+	{
+		CallBackFuncPtr();
+	}
+ }

@@ -1,0 +1,61 @@
+
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "TIMER_Regster.h"
+#include "TIMER_Interface.h"
+#include "GIE_Regster.h"
+#include "DIO_Interface.h"
+
+static void  (*CallBackFuncPtr)(void)= NULL;
+
+void  TIMER0_VidSetCallBack (void (*LOC_funcptr)(void) )
+{
+	if(LOC_funcptr  != NULL )
+	{
+		CallBackFuncPtr = LOC_funcptr ;
+	}
+}
+
+void TIMER0_VidInit(Timer0Mode_type mode, Timer0Scaler_type scaler)
+{
+	switch(mode)
+	{
+		case TINER0_NORMAL_MODE:
+			CLR_BIT(TCCR0,WGM00);
+			CLR_BIT(TCCR0,WGM01);
+			SET_BIT(TCCR0,WGM01);
+			break;
+		case TIMER0_PHASECRRECT_MODE:
+				SET_BIT(TCCR0,WGM00);
+				CLR_BIT(TCCR0,WGM01);
+					break;
+		case TIMER0_CTC_MODE:
+				CLR_BIT(TCCR0,WGM00);
+				SET_BIT(TCCR0,WGM01);
+					break;
+		case TIMER0_FASTPWM_MODE:
+				SET_BIT(TCCR0,WGM00);
+				SET_BIT(TCCR0,WGM01);
+					break;
+	}
+	TCCR0 =TCCR0&0xf8;  //11111000
+	TCCR0 = TCCR0 | scaler;
+
+}
+
+void Timer0_VidOverInterrupt_Enable(void)
+{
+	SET_BIT(TIMSK,TOIE0);
+}
+void Timer0_VidOverInterrupt_Disable(void)
+{
+	CLR_BIT(TIMSK,TOIE0);
+}
+
+ISR(TIMER_CTC_VECT )
+{
+	if(CallBackFuncPtr != NULL )
+	{
+		CallBackFuncPtr();
+	}
+ }

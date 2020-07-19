@@ -1,0 +1,27 @@
+/*
+ * DIO_TYPE.h
+ *
+ *  Created on: Jun 3, 2020
+ *      Author: shafek
+ */
+
+#ifndef COTS_MCAL_DIO_DIO_TYPE_H_
+#define COTS_MCAL_DIO_DIO_TYPE_H_
+typedef enum {
+	INPUT,
+	OUTPUT
+}DIO_Direction;
+
+typedef enum {
+	PORTA,
+	PORTB,
+	PORTC,
+	PORTD
+
+}DIO_PORT_ID;
+
+typedef enum {
+	LOW,
+	HIGH
+}DIO_Port_Vule;
+#endif /* COTS_MCAL_DIO_DIO_TYPE_H_ */

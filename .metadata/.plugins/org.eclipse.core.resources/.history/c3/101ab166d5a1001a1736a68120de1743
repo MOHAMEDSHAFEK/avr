@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: May 29, 2020
+ *      Author: shafek
+ */
+	#include <avr/io.h>
+	#include <avr/delay.h>
+	#define set_bit(var,bit_no)   var=(1<<bit_no)|var
+	void main(void)
+	{	DDRD==0b11111111;
+		DDRA==0x00;
+		PORTA=0xff;
+	    while (1)
+	    {
+	    	/*for(int i=0;i<8;i++)
+	    	{
+	    	set_bit(PORTA,i);
+	    	_delay_ms(1000);
+	    	}*/
+	    	if ((PINA&0b00000001)==0)
+	    	{
+	    	PORTA=0x00;
+	    	 PORTA=0b00000001;
+	    	}
+	    	if ((PINA&0b00000010)==0)
+	    	{
+	    	PORTA=0b00000010;
+	    	}
+
+
+
+		}
+	}
+

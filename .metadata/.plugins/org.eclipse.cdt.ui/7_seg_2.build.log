@@ -1,0 +1,40 @@
+08:11:30 **** Build of configuration Debug for project 7_seg_2 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:9:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:9:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:22: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: 7_seg_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,7_seg_2.map -mmcu=atmega16 -o "7_seg_2.elf"  ./main.o   
+Finished building target: 7_seg_2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S 7_seg_2.elf  >"7_seg_2.lss"
+Finished building: 7_seg_2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 7_seg_2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3436 bytes (21.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+08:11:33 Build Finished (took 2s.903ms)
+

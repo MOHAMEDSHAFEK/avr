@@ -1,0 +1,28 @@
+
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "LCD_4BIT_Interface.h"
+#include "DIO_Interface.h"
+#include "EXI_Regster.h"
+#include "SPI_Regster.h"
+#include "SPI_Interface.h"
+
+void SPI_MastereInit(void)
+{
+		DIO_VidSetPinDirection(1,PIN5,OUTPUT);
+		DIO_VidSetPinDirection(1,PIN6,INPUT);
+		DIO_VidSetPinDirection(1,PIN4,OUTPUT);
+		DIO_VidSetPinDirection(1,PIN7,OUTPUT);
+		DIO_VidSetPinValue(1,PIN6,1);
+	//SET_BIT(SPSR,SPIF);
+/* Enable SPI, Master, set clock rate fck/16 */
+SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
+}
+
+u8  SPI_TRANSVER(u8 DATA)
+{
+	SPDR = DATA;
+	while (!GET_BIT(SPSR,SPIF));
+
+	return SPDR;
+}

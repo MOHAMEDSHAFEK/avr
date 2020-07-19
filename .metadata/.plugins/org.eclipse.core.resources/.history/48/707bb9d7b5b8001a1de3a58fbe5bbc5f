@@ -1,0 +1,29 @@
+
+#include "STD_TYPES.h"
+#include "GIE_Register.h"
+#include "BIT_MATH.h"
+
+void GIE_Enable(void)
+
+{
+	SIT_BIT(SREG,INT0);
+}
+
+void GIE_Disable(void)
+{
+    CLR_BIT(SREG,INT0);
+}
+
+void TIMER_VidEnable(void)
+{
+	//SELECT MODE
+	CLR_BIT(TCCR0,3);
+	CLR_BIT(TCCR0,6);
+	//CLOCK SELECT PRESCALER
+	CLR_BIT(TCCR0,0);
+	CLR_BIT(TCCR0,1);
+	SIT_BIT(TCCR0,2);
+	//ENABLE INTRRUPT
+	SIT_BIT(TIMSK,0);
+	CLR_BIT(TIMSK,0);	
+}

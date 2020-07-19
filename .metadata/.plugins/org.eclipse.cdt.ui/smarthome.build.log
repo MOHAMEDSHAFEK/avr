@@ -1,0 +1,45 @@
+16:49:06 **** Incremental Build of configuration Debug for project smarthome ****
+make all 
+Building file: E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.d" -MT"SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.o" -c -o "SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.o" "E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.c"
+In file included from E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/../../LIB/BIT_MATH.h:14,
+                 from E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.c:2:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/../../LIB/BIT_MATH.h:14,
+                 from E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.c:2:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: E:/embedded/Learn AVR/cots/smarthome/SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.c
+ 
+Building target: smarthome.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,smarthome.map -mmcu=atmega32 -o "smarthome.elf"  ./SmartHome/MCAL/UART/UART_Program.o  ./SmartHome/MCAL/Timer_Counter/Timer_Count0_Program.o ./SmartHome/MCAL/Timer_Counter/Timer_Count1_Program.o ./SmartHome/MCAL/Timer_Counter/Timer_Count2_Program.o  ./SmartHome/MCAL/GIE/GIE_Program.o  ./SmartHome/MCAL/EXT_INT/EXT_Program.o  ./SmartHome/MCAL/DIO/DIO_Program.o  ./SmartHome/MCAL/ADC/ADC_Program.o  ./SmartHome/HAL/Sensors/Sensors.o  ./SmartHome/HAL/Motors/Motors.o  ./SmartHome/HAL/LCD_4BIT/LCD_4BIT_Program.o  ./SmartHome/HAL/KeyPad/KeyPad_Program.o  ./SmartHome/APP/Display.o ./SmartHome/APP/smarthome.o  ./SmartHome/main.o   
+Finished building target: smarthome.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S smarthome.elf  >"smarthome.lss"
+Finished building: smarthome.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex smarthome.elf  "smarthome.hex"
+Finished building: smarthome.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 smarthome.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13988 bytes (42.7% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:49:10 Build Finished (took 3s.870ms)
+

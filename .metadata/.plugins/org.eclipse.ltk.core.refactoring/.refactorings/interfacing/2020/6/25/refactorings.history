@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;interfacing/cots/MCAL/EXT_INT&apos; to &apos;EXI&apos;" description="Rename resource &apos;EXT_INT&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cots/MCAL/EXT_INT" name="EXI" stamp="1592350516699" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;interfacing/cots/MCAL/GIE/EXI_TYPE.h&apos; to &apos;GIE_TYPE.h&apos;" description="Rename resource &apos;EXI_TYPE.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cots/MCAL/GIE/EXI_TYPE.h" name="GIE_TYPE.h" stamp="1592603544774" updateReferences="true"/>
+</session>

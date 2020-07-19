@@ -1,0 +1,110 @@
+01:19:37 **** Build of configuration Debug for project servo_motor_t1 ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+In file included from ../ADC_Program.c:5:
+../ADC_Regster.h:24:1: warning: "ADC_Left_Adjust" redefined
+../ADC_Regster.h:21:1: warning: this is the location of the previous definition
+../ADC_Regster.h:25:1: warning: "ADC_Right_Adjust" redefined
+../ADC_Regster.h:22:1: warning: this is the location of the previous definition
+Finished building: ../ADC_Program.c
+ 
+Building file: ../DIO_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DIO_Program.d" -MT"DIO_Program.o" -c -o "DIO_Program.o" "../DIO_Program.c"
+Finished building: ../DIO_Program.c
+ 
+Building file: ../EXI_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"EXI_Program.d" -MT"EXI_Program.o" -c -o "EXI_Program.o" "../EXI_Program.c"
+In file included from ../EXI_Program.c:6:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../EXI_Program.c:6:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../EXI_Program.c
+ 
+Building file: ../GIE_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"GIE_Program.d" -MT"GIE_Program.o" -c -o "GIE_Program.o" "../GIE_Program.c"
+Finished building: ../GIE_Program.c
+ 
+Building file: ../LCD_4BIT_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_4BIT_Program.d" -MT"LCD_4BIT_Program.o" -c -o "LCD_4BIT_Program.o" "../LCD_4BIT_Program.c"
+In file included from ../LCD_4BIT_Program.c:12:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD_4BIT_Program.c:12:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_4BIT_Program.c: In function 'LCD_GoToPosition':
+../LCD_4BIT_Program.c:125: warning: operation on 'adress' may be undefined
+../LCD_4BIT_Program.c: In function 'LCD_StoreCustomChr':
+../LCD_4BIT_Program.c:166: warning: operation on 'LOC_Adress' may be undefined
+Finished building: ../LCD_4BIT_Program.c
+ 
+Building file: ../TIMER_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_Program.d" -MT"TIMER_Program.o" -c -o "TIMER_Program.o" "../TIMER_Program.c"
+In file included from ../TIMER_Program.c:5:
+../EXI_Regster.h:10:1: warning: "INT0" redefined
+In file included from ../TIMER_Program.c:4:
+../TIMER_Regster.h:25:1: warning: this is the location of the previous definition
+Finished building: ../TIMER_Program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+../ADC_Regster.h:24:1: warning: "ADC_Left_Adjust" redefined
+../ADC_Regster.h:21:1: warning: this is the location of the previous definition
+../ADC_Regster.h:25:1: warning: "ADC_Right_Adjust" redefined
+../ADC_Regster.h:22:1: warning: this is the location of the previous definition
+In file included from ../main.c:16:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:16:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:21: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:25: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c: In function 'func1':
+../main.c:129: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:139: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:150: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:160: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+../main.c:167: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+Finished building: ../main.c
+ 
+Building target: servo_motor_t1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,servo_motor_t1.map -mmcu=atmega32 -o "servo_motor_t1.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./LCD_4BIT_Program.o ./TIMER_Program.o ./main.o   
+Finished building target: servo_motor_t1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S servo_motor_t1.elf  >"servo_motor_t1.lss"
+Finished building: servo_motor_t1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex servo_motor_t1.elf  "servo_motor_t1.hex"
+Finished building: servo_motor_t1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 servo_motor_t1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12834 bytes (39.2% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:19:40 Build Finished (took 3s.233ms)
+

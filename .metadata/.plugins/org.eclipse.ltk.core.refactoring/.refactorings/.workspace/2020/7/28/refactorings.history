@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;read PWM&apos; to &apos;read_PWM&apos;" description="Rename resource &apos;read PWM&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/read PWM" name="read_PWM" stamp="1594007509587" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;TIMER1&apos; to &apos;servo_motor_t1&apos;" description="Rename resource &apos;TIMER1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/TIMER1" name="servo_motor_t1" stamp="1594335447964" updateReferences="true"/>
+</session>

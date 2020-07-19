@@ -1,0 +1,61 @@
+/*
+ * main.c
+ *
+ *  Created on: May 30, 2020
+ *      Author: MGIsmail
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_Interface.h"
+#include "LCD_Interface.h"
+#include <avr/delay.h>
+
+int main (void)
+{
+	LCD_VidInit();
+	_delay_ms(2);
+	//LCD_VidDispNumber(112);
+	//LCD_VidWriteData('52');
+	LCD_VidString("Mohamed=");
+	LCD_VidDispNumber(2340);
+	/*LCD_VidWriteCommand(Clear_Display);
+	_delay_ms(2);
+	void LCD_VidGotoCGRAM();
+	LCD_VidWriteData(0b00000110);
+	LCD_VidWriteData(0b00000100);
+	LCD_VidWriteData(0b00001110);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidWriteData(0b00000100);
+	LCD_VidWriteData(0b00000100);
+	LCD_VidWriteData(0b00000100);
+	LCD_VidWriteData(0b00000100);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidWriteData(0b00001100);
+	LCD_VidWriteData(0b00000010);
+	LCD_VidWriteData(0b00011111);
+	LCD_VidWriteData(0b00000000);
+	LCD_VidPostion(0,15);
+	LCD_VidWriteData(0);
+	LCD_VidPostion(0,14);
+	LCD_VidWriteData(1);*/
+	while(1)
+	{
+		/*LCD_VidPostion(0,0);
+		LCD_VidString("Mohamed");
+		_delay_ms(1000);
+		LCD_VidWriteCommand(0b000000001);
+		LCD_VidPostion(1,4);
+		LCD_VidString("Mohamed");
+		_delay_ms(1000);
+		LCD_VidWriteCommand(0b000000001);
+		LCD_VidPostion(0,9);
+		LCD_VidString("Mohamed");
+		_delay_ms(1000);
+		LCD_VidWriteCommand(0b000000001);*/
+	}
+	return 0;
+}
+

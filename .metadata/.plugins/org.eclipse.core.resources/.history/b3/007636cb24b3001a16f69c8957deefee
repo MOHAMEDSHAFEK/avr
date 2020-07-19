@@ -1,0 +1,10 @@
+
+  
+#ifndef COTS_MCAL_GIE_CIE_INTERFACE_H_
+#define COTS_MCAL_GIE_CIE_INTERFACE_H_
+
+void GIE_VidEnable(GIEnteruptSource LOC_Interupt);
+
+void GIE_VidDisable(GIEnteruptSource LOC_Interupt);
+
+#endif /* COTS_MCAL_EXI_EXI_INTERFACE_H_ */

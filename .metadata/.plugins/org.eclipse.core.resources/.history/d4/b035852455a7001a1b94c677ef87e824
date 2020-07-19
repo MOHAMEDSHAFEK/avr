@@ -1,0 +1,9 @@
+#ifndef _BIT_CALC_H_
+#define _BIT_CALC_H_
+
+#define CLR_BIT(var,bit_no)          ((var)&=(~(1<<(bit_no))))
+#define SET_BIT(var,bit_no)             ((var) |= (1<<(bit_no)))
+#define toggle_bit(var,bit_no)          ((var) ^=(1<<(bit_no)))
+#define get_bit(var,bit_no)             (((var)>>(bit_no))&(1))
+
+#endif

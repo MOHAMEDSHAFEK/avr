@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: May 30, 2020
+ *      Author: MGIsmail
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_Interface.h"
+#include "LCD_Interface.h"
+
+
+int main (void)
+{
+	LCD_VidInit();
+	//LCD_VidWriteData('52');
+	//LCD_VidString("Mohamed=");
+	//LCD_VidDispNumber(234);
+	LCD_VidPostion(0,3);
+	LCD_VidString("Mohamed");
+
+
+	while(1)
+	{
+
+	}
+	return 0;
+}
+

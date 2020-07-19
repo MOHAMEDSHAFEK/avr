@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: May 30, 2020
+ *      Author: MGIsmail
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_Interface.h"
+#include "LCD_Interface.h"
+
+
+int main (void)
+{
+	LCD_VidInit();
+	LCD_VidString("Mohamed Shafek");
+
+
+
+
+	while(1)
+	{
+
+	}
+	return 0;
+}
+

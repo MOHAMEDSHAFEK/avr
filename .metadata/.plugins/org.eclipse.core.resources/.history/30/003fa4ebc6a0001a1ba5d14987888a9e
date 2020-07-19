@@ -1,0 +1,60 @@
+/*
+ * main.c
+ *
+ *  Created on: May 19, 2020
+ *      Author: mazen
+ */
+
+
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+#include "seven_seg.h"
+
+int main(void)
+{
+	//init...
+	DDRC==0x00;
+	_7seg segments[2];
+
+	_7seg_port_init(&segments[0],&PORTD,&DDRD,COM_ANODE,0);
+	_7seg_port_init(&segments[1],&PORTA,&DDRA,COM_ANODE,0);
+
+	//superloop
+	if ((PINC&0b00000000)!=0)
+	{
+		while(1)
+		{
+			for(int j=0; j<10 ; j++)
+			{
+				for(int i=0; i<10 ; i++)
+						{
+							display_num(&segments[0],i);
+							_delay_ms(250);
+						}
+				display_num(&segments[1],j);
+
+			}
+		}
+	}
+	else
+	{
+		while(1)
+		{
+			for(int j=9; j>=0 ; j--)
+			{
+				for(int i=9; i>=0 ; i--)
+						{
+							display_num(&segments[0],i);
+							_delay_ms(250);
+						}
+				display_num(&segments[1],j);
+
+			}
+		}
+
+
+
+	}
+}

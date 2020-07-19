@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: May 30, 2020
+ *      Author: MGIsmail
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_Register.h"
+#include "DIO_Interface.h"
+
+#include "LCD_4BIT_Interface.h"
+#include "GIE_Interface.h"
+#include "TIMER_Interface.h"
+#include "TIMER_Regster.h"
+#include "EXI_Regster.h"
+
+#include <util/delay.h>
+
+//void func_1(void);
+int main (void)
+{
+
+	//lcd int
+	LCD_Vid4Initialization();
+while(1)
+	{
+
+	}
+return 0;
+}

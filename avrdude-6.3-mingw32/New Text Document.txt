@@ -1,0 +1,1 @@
+avrdude -c usbasp -p m32 -P usb -u -U flash:w:"$(OutDir)Debug\$(TargetName).hex"

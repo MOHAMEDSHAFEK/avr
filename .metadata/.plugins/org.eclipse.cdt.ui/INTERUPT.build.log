@@ -1,0 +1,38 @@
+23:21:56 **** Incremental Build of configuration Debug for project INTERUPT ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+Finished building: ../ADC_Program.c
+ 
+Building target: INTERUPT.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,INTERUPT.map -mmcu=atmega32 -o "INTERUPT.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./KEY_PAD_Program.o ./LCD_Program.o ./main.o   
+Finished building target: INTERUPT.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S INTERUPT.elf  >"INTERUPT.lss"
+Finished building: INTERUPT.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex INTERUPT.elf  "INTERUPT.hex"
+Finished building: INTERUPT.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 INTERUPT.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9730 bytes (29.7% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:22:04 Build Finished (took 8s.294ms)
+

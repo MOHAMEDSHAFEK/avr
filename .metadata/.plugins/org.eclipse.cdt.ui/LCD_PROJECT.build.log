@@ -1,0 +1,33 @@
+20:20:44 **** Incremental Build of configuration Debug for project LCD_PROJECT ****
+make all 
+Building target: LCD_PROJECT.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD_PROJECT.map -mmcu=atmega32 -o "LCD_PROJECT.elf"  ./DIO_Program.o ./LCD_Program.o ./main.o   
+Finished building target: LCD_PROJECT.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD_PROJECT.elf  >"LCD_PROJECT.lss"
+Finished building: LCD_PROJECT.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_PROJECT.elf  "LCD_PROJECT.hex"
+Finished building: LCD_PROJECT.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_PROJECT.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6640 bytes (20.3% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:20:46 Build Finished (took 1s.824ms)
+

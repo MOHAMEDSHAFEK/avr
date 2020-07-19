@@ -1,0 +1,80 @@
+01:21:16 **** Incremental Build of configuration Debug for project interfacing ****
+make all 
+Building file: E:/embedded/Learn AVR/cots/MCAL/EXI/EXI_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"cots/MCAL/EXI/EXI_Program.d" -MT"cots/MCAL/EXI/EXI_Program.o" -c -o "cots/MCAL/EXI/EXI_Program.o" "E:/embedded/Learn AVR/cots/MCAL/EXI/EXI_Program.c"
+In file included from E:/embedded/Learn AVR/cots/MCAL/EXI/EXI_Program.c:16:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from E:/embedded/Learn AVR/cots/MCAL/EXI/EXI_Program.c:16:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: E:/embedded/Learn AVR/cots/MCAL/EXI/EXI_Program.c
+ 
+Building file: E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"cots/MCAL/ADC/ADC_Program.d" -MT"cots/MCAL/ADC/ADC_Program.o" -c -o "cots/MCAL/ADC/ADC_Program.o" "E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c"
+In file included from E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c:6:
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:20:1: warning: "ADTS0" redefined
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:12:1: warning: this is the location of the previous definition
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:21:1: warning: "ADTS1" redefined
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:11:1: warning: this is the location of the previous definition
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:22:1: warning: "ADTS2" redefined
+E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Regster.h:10:1: warning: this is the location of the previous definition
+In file included from E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c:10:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c:10:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: E:/embedded/Learn AVR/cots/MCAL/ADC/ADC_Program.c
+ 
+Building file: E:/embedded/Learn AVR/cots/APP/ADCI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"cots/APP/ADCI.d" -MT"cots/APP/ADCI.o" -c -o "cots/APP/ADCI.o" "E:/embedded/Learn AVR/cots/APP/ADCI.c"
+In file included from E:/embedded/Learn AVR/cots/APP/ADCI.c:17:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from E:/embedded/Learn AVR/cots/APP/ADCI.c:17:
+e:/embedded/learn avr/avrlecimt/imt_sdk_win_64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+E:/embedded/Learn AVR/cots/APP/ADCI.c: In function 'ADCI':
+E:/embedded/Learn AVR/cots/APP/ADCI.c:24: warning: pointer targets in passing argument 1 of 'LCD_Write4String' differ in signedness
+Finished building: E:/embedded/Learn AVR/cots/APP/ADCI.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:9: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:13: warning: implicit declaration of function 'key_pad'
+Finished building: ../main.c
+ 
+Building target: interfacing.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,interfacing.map -mmcu=atmega32 -o "interfacing.elf"  ./cots/MCAL/GIE/GIE_Program.o  ./cots/MCAL/EXI/EXI_Program.o  ./cots/MCAL/DIO/DIO_Program.o  ./cots/MCAL/ADC/ADC_Program.o  ./cots/HAL/SEVEN_SEGMENT/SEVEN_SEGMENT.o  ./cots/HAL/LCD_4BIT/LCD_4BIT_Program.o  ./cots/HAL/LCD/LCD_Program.o  ./cots/HAL/KEY_PAD/KEY_PAD_Program.o  ./cots/HAL/DIO_FUNCTION/DIO_FUCTION.o  ./cots/APP/clalcluter/calculator.o  ./cots/APP/ADC.o ./cots/APP/ADCI.o ./cots/APP/EXI.o ./cots/APP/LCD.o ./cots/APP/LCD_4BIT.o ./cots/APP/LED.o ./cots/APP/SEGMENT.o ./cots/APP/dc_motor.o ./cots/APP/key_pad.o ./cots/APP/push_button.o  ./main.o   
+Finished building target: interfacing.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S interfacing.elf  >"interfacing.lss"
+Finished building: interfacing.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex interfacing.elf  "interfacing.hex"
+Finished building: interfacing.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 interfacing.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   29324 bytes (89.5% Full)
+(.text + .data + .bootloader)
+
+Data:        205 bytes (10.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:21:20 Build Finished (took 4s.806ms)
+

@@ -1,0 +1,42 @@
+01:36:05 **** Incremental Build of configuration Debug for project timer_drive ****
+make all 
+Building file: ../TIMER_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER_Program.d" -MT"TIMER_Program.o" -c -o "TIMER_Program.o" "../TIMER_Program.c"
+In file included from ../TIMER_Program.c:6:
+../GIE_Regster.h:16:1: warning: "INT0" redefined
+In file included from ../TIMER_Program.c:4:
+../TIMER_Regster.h:22:1: warning: this is the location of the previous definition
+Finished building: ../TIMER_Program.c
+ 
+Building target: timer_drive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,timer_drive.map -mmcu=atmega32 -o "timer_drive.elf"  ./ADC_Program.o ./DIO_Program.o ./EXI_Program.o ./GIE_Program.o ./LCD_4BIT_Program.o ./TIMER_Program.o ./main.o   
+Finished building target: timer_drive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S timer_drive.elf  >"timer_drive.lss"
+Finished building: timer_drive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex timer_drive.elf  "timer_drive.hex"
+Finished building: timer_drive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 timer_drive.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11726 bytes (35.8% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:36:06 Build Finished (took 1s.322ms)
+
